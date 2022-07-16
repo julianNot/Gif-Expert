@@ -3,25 +3,24 @@ import { AddCategory } from './components/AddCategory'
 
 export const GifExpertApp = () => {
 
-    const [ categories, setCategories ] = useState( [ 'one punch'] );
+    const [ categories, setCategories ] = useState( [ 'Vue' ] );
 
-    const onAddCategory = () => {
-        // Golang
-        setCategories( ["Golang", ...categories ])
+    const onAddCategory = ( onNewCategory ) => {
+        setCategories( [onNewCategory, ...categories ])
     }
-
-    console.log(categories);
 
   return (
     <>
-        {/* Titulo */}
         <h1>GifExpertApp</h1>
 
         {/* Input */}
-        <AddCategory />
+        <AddCategory 
+            // setCategories={ setCategories } 
+            onNewCategory={ onAddCategory }
+        />
 
         {/* Listado */}
-        <button onClick={onAddCategory}>Agregar</button>
+        {/* <button onClick={onAddCategory}>Agregar</button> */}
         <ol>
             { 
             categories.map( category => {
