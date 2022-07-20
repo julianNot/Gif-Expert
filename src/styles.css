@@ -62,3 +62,12 @@ h3 {
 .card img {
 	width: 100%;
 }
+
+button {
+	margin-bottom: 8px;
+	padding: 8px 12px;
+	background-color: rgb(235, 72, 72);
+	border: 1px solid gray;
+	cursor: pointer;
+	color: white;
+}
